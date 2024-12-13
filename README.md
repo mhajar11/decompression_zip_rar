@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-# Décompresseur Automatique
-
-## Description
-Ce projet permet de décompresser des fichiers ZIP et RAR automatiquement.
-
-## Utilisation
--changer ces lignes de codes: 
-# Chemin vers le dossier contenant les fichiers compressés
-COMPRESSED_FOLDER = ''  
-
-# Chemin vers le dossier de destination
-EXTRACT_FOLDER = ''
-
-- Téléchargez l'exécutable dans le dossier `dist/`.
-- Double-cliquez sur le fichier `decompresser_zips.exe` pour l'exécuter.
-
-## Auteur
-MHAJAR Youness
-=======
-# decompression_project
-
-
 
 ## Getting started
 
@@ -74,21 +51,17 @@ Ce projet permet de décompresser automatiquement des fichiers ZIP et RAR dans u
 1. **Préparation des fichiers compressés :**
    - Téléchargez tous vos fichiers ZIP et RAR dans un même dossier.
 
-2. **Configurer les chemins d'accès :**
-   - Ouvrez le script Python et modifiez les variables suivantes pour indiquer les chemins d'accès appropriés :
-     ```python
+2. **Utilisation de l'exécutable :**
+   - Téléchargez l'exécutable généré dans le dossier `dist/`.
+   - Double-cliquez sur le fichier `decompresser_zips.exe` pour l'exécuter.
+
+3. **Configurer les chemins d'accès :**
      # Chemin vers le dossier contenant les fichiers compressés
      COMPRESSED_FOLDER = 'chemin/vers/votre/dossier/source'
      
      # Chemin vers le dossier de destination
      EXTRACT_FOLDER = 'chemin/vers/votre/dossier/destination'
-     ```
 
-3. **Utilisation de l'exécutable :**
-   - Téléchargez l'exécutable généré dans le dossier `dist/`.
-   - Placez l'exécutable dans le même répertoire que vos fichiers compressés.
-   - Double-cliquez sur le fichier `decompresser_zips.exe` pour l'exécuter.
-   - Les fichiers décompressés seront automatiquement placés dans le dossier de destination spécifié.
 
 ## Remarques
 - **Compatibilité des formats :**

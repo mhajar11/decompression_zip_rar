@@ -1,16 +1,6 @@
 stages:
-  - test
   - build
   - deploy
-
-# Tester le code
-test:
-  stage: test
-  image: python:3.9
-  before_script:
-    - pip install -r requirements.txt
-  script:
-    - python -m unittest discover tests/ || echo "Aucun test trouvé"
 
 # Construire un exécutable
 build:

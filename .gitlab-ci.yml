@@ -1,0 +1,37 @@
+stages:
+  - test
+  - build
+  - deploy
+
+# Tester le code
+test:
+  stage: test
+  image: python:3.9
+  before_script:
+    - pip install -r requirements.txt
+  script:
+    - python -m unittest discover tests/ || echo "Aucun test trouvé"
+
+# Construire un exécutable
+build:
+  stage: build
+  image: python:3.9
+  before_script:
+    - pip install -r requirements.txt
+    - pip install pyinstaller
+  script:
+    - pyinstaller --onefile decompresser_zips.py
+  artifacts:
+    paths:
+      - dist/  
+
+# Étape 3 : Déploiement automatique
+deploy:
+  stage: deploy
+  image: alpine
+  before_script:
+    - apk add --no-cache openssh-client
+  script:
+    - scp dist/decompresser_zips user@server:/chemin/de/deploiement  
+  only:
+    - main

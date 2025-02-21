@@ -1,0 +1,25 @@
+stages:
+  - build
+  - artifact
+
+# Construire l'exécutable
+build:
+  stage: build
+  image: python:3.10  
+  before_script:
+    - pip install pyinstaller
+  script:
+    - pyinstaller --onefile decompresser_zips.py
+  artifacts:
+    paths:
+      - dist/decompresser_zips  
+
+# Étape 2 : Publier l'exécutable pour téléchargement
+artifact:
+  stage: artifact
+  script:
+    - echo "L'exécutable est disponible pour téléchargement."
+  artifacts:
+    paths:
+      - dist/decompresser_zips
+    expire_in: 1 month

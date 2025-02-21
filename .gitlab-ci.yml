@@ -14,7 +14,7 @@ build:
     paths:
       - dist/decompresser_zips  
 
-# Étape 2 : Publier l'exécutable pour téléchargement
+#  Publier l'exécutable pour téléchargement
 artifact:
   stage: artifact
   script:
@@ -22,4 +22,4 @@ artifact:
   artifacts:
     paths:
       - dist/decompresser_zips
-    expire_in: 1 month
+    expire_in: 1 year
